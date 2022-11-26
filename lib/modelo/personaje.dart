@@ -5,12 +5,7 @@ class Character {
   final String actor;
   final String image;
 
-  Character(
-      {required this.actor,
-      required this.house,
-      required this.image,
-      required this.isStudent,
-      required this.name});
+  Character({this.actor, this.house, this.image, this.isStudent, this.name});
 
   factory Character.fromJson(Map<String, dynamic> json) {
     return Character(
