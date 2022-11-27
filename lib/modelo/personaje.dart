@@ -14,45 +14,46 @@ class Character {
   String actor;
   String image;
   String? alternate_names;
-  String? house;
-  String? patronus;
   String? alternate_actors;
   String? alive;
-  String?eyeColour;
-  String?ancestry;
+  String? eyeColour;
+  String? ancestry;
+  String patrous;
 
-Character({
-  this.actor, 
-  this.house, 
-  this.image, 
-  this.hogwartsStudent, 
-  this.name
-  this.house,
-  this.patronus,
-  this.eyeColour,
-  this.alive,
+  Character({
+    required this.actor,
+    required this.house,
+    required this.image,
+    required this.hogwartsStudent,
+    required this.hogwartsStaff,
+    required this.name,
+    required this.patrous,
+    required this.eyeColour,
+    required this.alive,
   });
+
   factory Character.fromJson(Map<String, dynamic> json) {
     return Character(
         actor: json["actor"],
         house: json["house"],
         image: json["image"],
         hogwartsStudent: json["Student"],
-        alive:json["alive"],
-        patronus:json["patronus"],
-        eyeColour:json["eyeColour"]
-        name: json["name"]),
-        
+        hogwartsStaff: json["hogwartsStaff"],
+        alive: json["alive"],
+        patrous: json["patronus"],
+        eyeColour: json["eyeColour"],
+        name: json["name"]);
   }
-   Map<String, dynamic> toJson() => {
+
+  Map<String, dynamic> toJson() => {
         "actor": actor,
         "name": name,
         "house": house,
-        "patronus": patronus,
-        "image":image,
-        "hogwartsStudent":hogwartsStudent,
-        "eyeColour":eyeColour,
-        "alive":alive,
-        
+        "patronus": patrous,
+        "image": image,
+        "hogwartsStudent": hogwartsStudent,
+        "hogwartsStaff": hogwartsStaff,
+        "eyeColour": eyeColour,
+        "alive": alive,
       };
 }
