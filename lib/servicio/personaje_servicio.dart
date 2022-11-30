@@ -1,9 +1,10 @@
+// ignore: import_of_legacy_library_into_null_safe
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 import '../modelo/personaje.dart';
 
 class CharacterService {
-  Future<List<Character>?> fetchCharacters() async {
+  Future<List<Character>> fetchCharacters() async {
     List<Character> list = <Character>[];
     http.Response response =
         await http.get("https://hp-api.herokuapp.com/api/characters");
