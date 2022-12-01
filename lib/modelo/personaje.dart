@@ -19,18 +19,18 @@ class Character {
   String? eyeColour;
   String? ancestry;
   String patrous;
-
-  Character({
-    required this.actor,
-    required this.house,
-    required this.image,
-    required this.hogwartsStudent,
-    required this.hogwartsStaff,
-    required this.name,
-    required this.patrous,
-    required this.eyeColour,
-    required this.alive,
-  });
+  String isStudient;
+  Character(
+      {required this.actor,
+      required this.house,
+      required this.image,
+      required this.hogwartsStudent,
+      required this.hogwartsStaff,
+      required this.name,
+      required this.patrous,
+      required this.eyeColour,
+      required this.alive,
+      required this.isStudient});
 
   factory Character.fromJson(Map<String, dynamic> json) {
     return Character(
@@ -42,6 +42,7 @@ class Character {
         alive: json["alive"],
         patrous: json["patronus"],
         eyeColour: json["eyeColour"],
+        isStudient: json["isStudient"],
         name: json["name"]);
   }
 
