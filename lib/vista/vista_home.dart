@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../modelo/personaje.dart';
 import "../servicio/personaje_servicio.dart";
 
 class Home extends StatefulWidget {
