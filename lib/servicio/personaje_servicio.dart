@@ -14,6 +14,6 @@ class CharacterService {
       list = json.map<Character>((item) => Character.fromJson(item)).toList();
       return list;
     } else
-      return null;
+      return list;
   }
 }
