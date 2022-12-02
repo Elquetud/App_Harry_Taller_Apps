@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:harry_potter/servicio/detalles_personaje.dart';
 import '../modelo/personaje.dart';
 import "../servicio/personaje_servicio.dart";
 
@@ -46,6 +47,13 @@ class _HomeState extends State<Home> {
                                 ),
                               ),
                             ),
+                            onTap: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          DetallesPersonaje(item)));
+                            },
                           ),
                         ))
                     .toList());
