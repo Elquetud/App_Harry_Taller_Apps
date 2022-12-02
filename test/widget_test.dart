@@ -18,7 +18,6 @@ void main() {
       "score": 1000
     };
 
-    images:
     var parsedJson;
     personaje.fromJson(parsedJson['personaje']);
   });
