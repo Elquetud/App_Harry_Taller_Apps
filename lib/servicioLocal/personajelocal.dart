@@ -23,6 +23,15 @@ class personajelocal {
         child: FutureBuilder(
           builder: (context, snapshot) {
             var showData = json.decode(snapshot.data.toString());
+            return ListView.builder(
+              itemBuilder: (BuildContext context, int index) {
+                return ListTile(
+                  title: Text(showData[index]['name']),
+                  subtitle: Text(showData[index]['house']['gender']),
+                );
+              },
+              itemCount: showData.length,
+            );
           },
           future: DefaultAssetBundle.of(context)
               .loadString("assets/emprecord.json"),
